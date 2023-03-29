@@ -6,7 +6,8 @@
     <section class="elementor-section elementor-top-section elementor-element elementor-element-ad2bdfd elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
              data-id="ad2bdfd"
              data-element_type="section"
-             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
+            style="background-image:url(/static/image/dent2.jpg">
         <div class="elementor-background-overlay"></div>
         <div class="elementor-container elementor-column-gap-default">
             <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-93a0597"
@@ -178,11 +179,13 @@
 				<form
 					className="metform-form-content"
 					ref=${parent.formContainerRef}
+					action="/appoint"
+					method="post"
 					onSubmit=${ validation.handleSubmit( parent.handleFormSubmit ) }
 
 					>
 
-
+     
 					${is_dummy_markup ? message_position === 'top' ?  props.ResponseDummyMarkup(message_successIcon, message_proClass) : '' : ''}
 					${is_dummy_markup ? ' ' :  message_position === 'top' ? props.SubmitResponseMarkup`${parent}${state}${message_successIcon}${message_errorIcon}${message_proClass}` : ''}
 
@@ -205,12 +208,13 @@
 			<div className="elementor-widget-wrap elementor-element-populated">
 								<div className="elementor-element elementor-element-1689e531 elementor-widget elementor-widget-mf-text" data-id="1689e531" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-first-name&quot;}" data-widget_type="mf-text.default">
 				<div className="elementor-widget-container">
-
+    
 		<div className="mf-input-wrapper">
+		
 							<label className="mf-input-label" htmlFor="mf-input-text-1689e531">
-					${ parent.decodeEntities(`Name`) } 					<span className="mf-input-required-indicator"></span>
+					${ parent.decodeEntities(`Имя`) } 					<span className="mf-input-required-indicator"></span>
 				</label>
-
+    
 			<input
 				type="text"
 				className="mf-input "
@@ -384,6 +388,7 @@
 				</form>
 			`
 		
+                                        
                                         </script>
                                     </div>
                                 </div>
@@ -580,7 +585,7 @@
             <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c02f815 elementor-hidden-phone"
                  data-id="c02f815"
                  data-element_type="column"
-                style="display:block">
+                 style="display:block">
                 <div class="elementor-widget-wrap elementor-element-populated">
                     <div class="elementor-element elementor-element-3b57105 elementor-widget elementor-widget-image"
                          data-id="3b57105"
@@ -597,7 +602,7 @@
                                  srcset="/static/image/boss.png 1146w, /static/wp-content/uploads/sites/64/2021/03/professional-female-dentist-at-work-9SDJLQ4-e1616854265713-255x300.jpg 255w, /static/wp-content/uploads/sites/64/2021/03/professional-female-dentist-at-work-9SDJLQ4-e1616854265713-871x1024.jpg 871w, /static/wp-content/uploads/sites/64/2021/03/professional-female-dentist-at-work-9SDJLQ4-e1616854265713-768x903.jpg 768w, /static/wp-content/uploads/sites/64/2021/03/professional-female-dentist-at-work-9SDJLQ4-e1616854265713-800x940.jpg 800w"
                                  sizes="(max-width: 1146px) 100vw, 1146px"></div>
                     </div>
-                    <div class="elementor-element elementor-element-022f208 elementor-widget__width-auto elementor-absolute jkit-equal-height-disable elementor-widget elementor-widget-jkit_icon_box"
+                    <div class="elementor-element elementor-element-022f208 elementor-hidden-phone elementor-widget__width-auto elementor-absolute jkit-equal-height-disable elementor-widget elementor-widget-jkit_icon_box"
                          data-id="022f208"
                          data-element_type="widget"
                          data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
@@ -951,17 +956,17 @@
                                                                                            src="/static/wp-content/uploads/sites/64/2021/03/whitee.png"
                                                                                            alt="Teeth Whitening"></div>
                                                     </div>
-                                                    <div class="icon-box icon-box-body" style="height:154px">
+                                                    <div class="icon-box icon-box-body"> <!--style="height:154px"-->
                                                         <h3 class="title">Ортопедия</h3>
                                                         <p class="icon-box-description">Удаляем,восстанавливаем или
                                                             заменяем зубной ряд с помощью протезов.</p>
-<!--                                                        <div class="icon-box-button ">-->
-<!--                                                            <div class="btn-wrapper icon-position-after">-->
-<!--                                                                &lt;!&ndash;<a href=""-->
-<!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
-<!--                                                                                                     class="fas fa-arrow-right"></i></a>&ndash;&gt;-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
+                                                        <!--                                                        <div class="icon-box-button ">-->
+                                                        <!--                                                            <div class="btn-wrapper icon-position-after">-->
+                                                        <!--                                                                &lt;!&ndash;<a href=""-->
+                                                        <!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
+                                                        <!--                                                                                                     class="fas fa-arrow-right"></i></a>&ndash;&gt;-->
+                                                        <!--                                                            </div>-->
+                                                        <!--                                                        </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -985,17 +990,17 @@
                                                                                            src="/static/wp-content/uploads/sites/64/2021/03/check.png"
                                                                                            alt="Teeth Checkup"></div>
                                                     </div>
-                                                    <div class="icon-box icon-box-body" style="height:154px">
+                                                    <div class="icon-box icon-box-body"><!-- style="height:154px"-->
                                                         <h3 class="title">Реставрация</h3>
                                                         <p class="icon-box-description">Восстанавливаем анатомическую
                                                             форму зубов и придаем ей натуральный цвет</p>
-<!--                                                        <div class="icon-box-button ">-->
-<!--                                                            <div class="btn-wrapper icon-position-after">-->
-<!--                                                                <a href=""-->
-<!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
-<!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
+                                                        <!--                                                        <div class="icon-box-button ">-->
+                                                        <!--                                                            <div class="btn-wrapper icon-position-after">-->
+                                                        <!--                                                                <a href=""-->
+                                                        <!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
+                                                        <!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
+                                                        <!--                                                            </div>-->
+                                                        <!--                                                        </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -1019,17 +1024,17 @@
                                                                                            src="/static/wp-content/uploads/sites/64/2021/03/implant.png"
                                                                                            alt="Teeth Implants"></div>
                                                     </div>
-                                                    <div class="icon-box icon-box-body" style="height:154px">
+                                                    <div class="icon-box icon-box-body"><!-- style="height:154px"-->
                                                         <h3 class="title">Имплантация</h3>
                                                         <p class="icon-box-description">Устанавливаем импланты и
                                                             натуральные коронки на пустое место зубного ряда.</p>
-<!--                                                        <div class="icon-box-button ">-->
-<!--                                                            <div class="btn-wrapper icon-position-after">-->
-<!--                                                                <a href=""-->
-<!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
-<!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
+                                                        <!--                                                        <div class="icon-box-button ">-->
+                                                        <!--                                                            <div class="btn-wrapper icon-position-after">-->
+                                                        <!--                                                                <a href=""-->
+                                                        <!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
+                                                        <!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
+                                                        <!--                                                            </div>-->
+                                                        <!--                                                        </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -1060,17 +1065,17 @@
                                                                                            src="/static/wp-content/uploads/sites/64/2021/03/braces.png"
                                                                                            alt="Orthodontics"></div>
                                                     </div>
-                                                    <div class="icon-box icon-box-body" style="height:154px">
+                                                    <div class="icon-box icon-box-body"><!-- style="height:154px"-->
                                                         <h3 class="title">Ортодонтия</h3>
                                                         <p class="icon-box-description">Корректируем неправильный прикус
                                                             и расположение зубов с помощью брекетов.</p>
-<!--                                                        <div class="icon-box-button ">-->
-<!--                                                            <div class="btn-wrapper icon-position-after">-->
-<!--                                                                <a href=""-->
-<!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
-<!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
+                                                        <!--                                                        <div class="icon-box-button ">-->
+                                                        <!--                                                            <div class="btn-wrapper icon-position-after">-->
+                                                        <!--                                                                <a href=""-->
+                                                        <!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
+                                                        <!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
+                                                        <!--                                                            </div>-->
+                                                        <!--                                                        </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -1094,17 +1099,17 @@
                                                                                            src="/static/wp-content/uploads/sites/64/2021/03/crown.png"
                                                                                            alt="Dental Crown"></div>
                                                     </div>
-                                                    <div class="icon-box icon-box-body" style="height:154px">
+                                                    <div class="icon-box icon-box-body"><!-- style="height:154px"-->
                                                         <h3 class="title">Навигационная имплантация</h3>
                                                         <p class="icon-box-description">Установка импланта без надрезов
                                                             десны и швов с помощью хирургического шаблона.</p>
-<!--                                                        <div class="icon-box-button ">-->
-<!--                                                            <div class="btn-wrapper icon-position-after">-->
-<!--                                                                <a href=""-->
-<!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
-<!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
+                                                        <!--                                                        <div class="icon-box-button ">-->
+                                                        <!--                                                            <div class="btn-wrapper icon-position-after">-->
+                                                        <!--                                                                <a href=""-->
+                                                        <!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
+                                                        <!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
+                                                        <!--                                                            </div>-->
+                                                        <!--                                                        </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -1128,17 +1133,17 @@
                                                                                            src="/static/wp-content/uploads/sites/64/2021/03/filling.png"
                                                                                            alt="Dental Filling"></div>
                                                     </div>
-                                                    <div class="icon-box icon-box-body" style="height:154px">
+                                                    <div class="icon-box icon-box-body"><!-- style="height:154px"-->
                                                         <h3 class="title">Имплантация и протезирование</h3>
                                                         <p class="icon-box-description">Устанавливаем импланты и
                                                             натуральные коронки на пустое место зубного ряда.</p>
-<!--                                                        <div class="icon-box-button ">-->
-<!--                                                            <div class="btn-wrapper icon-position-after">-->
-<!--                                                                <a href=""-->
-<!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
-<!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
+                                                        <!--                                                        <div class="icon-box-button ">-->
+                                                        <!--                                                            <div class="btn-wrapper icon-position-after">-->
+                                                        <!--                                                                <a href=""-->
+                                                        <!--                                                                   class="icon-box-link">Подробнее<i aria-hidden="true"-->
+                                                        <!--                                                                                                     class="fas fa-arrow-right"></i></a>-->
+                                                        <!--                                                            </div>-->
+                                                        <!--                                                        </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -1218,13 +1223,13 @@
                                                 <div class="comment-content"><p>&quot;{{ ot.desc }}&quot;</p></div>
                                                 <div class="comment-bio">
                                                     <div class="bio-details">
-<!--                                                       <div class="profile-image"><img decoding="async"-->
-<!--                                                                                        src="/static/wp-content/uploads/sites/64/2021/03/testimonial-N8572T7.jpg"-->
-<!--                                                                                        alt="Dwayne Lake"></div>-->
+                                                        <!--                                                       <div class="profile-image"><img decoding="async"-->
+                                                        <!--                                                                                        src="/static/wp-content/uploads/sites/64/2021/03/testimonial-N8572T7.jpg"-->
+                                                        <!--                                                                                        alt="Dwayne Lake"></div>-->
                                                         <ul class="rating-stars"></ul>
                                                         <span class="profile-info">
                         <strong class="profile-name">{{ ot.name }}</strong>
-<!--                        <p class="profile-des">Entrepreneur</p>-->
+                                                            <!--                        <p class="profile-des">Entrepreneur</p>-->
                     </span>
                                                     </div>
                                                 </div>
@@ -1240,296 +1245,295 @@
             </div>
         </div>
     </section>
-<!--    <section class="elementor-section elementor-top-section elementor-element elementor-element-a9fd247 elementor-section-boxed elementor-section-height-default elementor-section-height-default"-->
-<!--             data-id="a9fd247"-->
-<!--             data-element_type="section">-->
-<!--        <div class="elementor-background-overlay"></div>-->
-<!--        <div class="elementor-container elementor-column-gap-default">-->
-<!--            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dd6b1c9"-->
-<!--                 data-id="dd6b1c9"-->
-<!--                 data-element_type="column">-->
-<!--                <div class="elementor-widget-wrap elementor-element-populated">-->
-<!--                    <div class="elementor-element elementor-element-32aa0f7 animated-slow elementor-invisible elementor-widget elementor-widget-heading"-->
-<!--                         data-id="32aa0f7"-->
-<!--                         data-element_type="widget"-->
-<!--                         data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}"-->
-<!--                         data-widget_type="heading.default">-->
-<!--                        <div class="elementor-widget-container">-->
-<!--                            <h5 class="elementor-heading-title elementor-size-default">Our Blog</h5></div>-->
-<!--                    </div>-->
-<!--                    <div class="elementor-element elementor-element-f910ca9 elementor-widget elementor-widget-heading"-->
-<!--                         data-id="f910ca9"-->
-<!--                         data-element_type="widget"-->
-<!--                         data-widget_type="heading.default">-->
-<!--                        <div class="elementor-widget-container">-->
-<!--                            <h2 class="elementor-heading-title elementor-size-default">Latest Blog & Articles-->
-<!--                            </h2></div>-->
-<!--                    </div>-->
-<!--                    <div class="elementor-element elementor-element-0e03774 elementor-widget elementor-widget-text-editor"-->
-<!--                         data-id="0e03774"-->
-<!--                         data-element_type="widget"-->
-<!--                         data-widget_type="text-editor.default">-->
-<!--                        <div class="elementor-widget-container">-->
-<!--                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
-<!--                            labore et dolore magna aliqua-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-226d4aa elementor-section-boxed elementor-section-height-default elementor-section-height-default"-->
-<!--                             data-id="226d4aa"-->
-<!--                             data-element_type="section">-->
-<!--                        <div class="elementor-container elementor-column-gap-no">-->
-<!--                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9adda55 elementor-invisible"-->
-<!--                                 data-id="9adda55"-->
-<!--                                 data-element_type="column"-->
-<!--                                 data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">-->
-<!--                                <div class="elementor-widget-wrap elementor-element-populated">-->
-<!--                                    <div class="elementor-element elementor-element-d3a4d8d elementor-widget elementor-widget-jkit_post_block"-->
-<!--                                         data-id="d3a4d8d"-->
-<!--                                         data-element_type="widget"-->
-<!--                                         data-widget_type="jkit_post_block.default">-->
-<!--                                        <div class="elementor-widget-container">-->
-<!--                                            <div class="jeg-elementor-kit jkit-postblock postblock-type-1 jkit-pagination-disable post-element jeg_module_14_24_640f7347917c5"-->
-<!--                                                 data-id="jeg_module_14_24_640f7347917c5"-->
-<!--                                                 data-settings="{&quot;post_type&quot;:&quot;post&quot;,&quot;number_post&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:4,&quot;sizes&quot;:[]},&quot;post_offset&quot;:0,&quot;unique_content&quot;:&quot;disable&quot;,&quot;include_post&quot;:&quot;&quot;,&quot;exclude_post&quot;:&quot;&quot;,&quot;include_category&quot;:&quot;&quot;,&quot;exclude_category&quot;:&quot;&quot;,&quot;include_author&quot;:&quot;&quot;,&quot;include_tag&quot;:&quot;&quot;,&quot;exclude_tag&quot;:&quot;&quot;,&quot;sort_by&quot;:&quot;latest&quot;,&quot;pagination_mode&quot;:&quot;disable&quot;,&quot;pagination_loadmore_text&quot;:&quot;Load More&quot;,&quot;pagination_loading_text&quot;:&quot;Loading...&quot;,&quot;pagination_number_post&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:3,&quot;sizes&quot;:[]},&quot;pagination_scroll_limit&quot;:0,&quot;pagination_icon&quot;:{&quot;value&quot;:&quot;&quot;,&quot;library&quot;:&quot;&quot;},&quot;pagination_icon_position&quot;:&quot;before&quot;,&quot;st_category_position&quot;:&quot;center&quot;,&quot;sg_content_postblock_type&quot;:&quot;type-1&quot;,&quot;sg_content_title_html_tag&quot;:&quot;h3&quot;,&quot;sg_content_category_enable&quot;:&quot;&quot;,&quot;sg_content_excerpt_enable&quot;:&quot;yes&quot;,&quot;sg_content_excerpt_length&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:15,&quot;sizes&quot;:[]},&quot;sg_content_excerpt_more&quot;:&quot;&quot;,&quot;sg_content_readmore_enable&quot;:&quot;yes&quot;,&quot;sg_content_readmore_icon&quot;:{&quot;value&quot;:&quot;fas fa-arrow-right&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;sg_content_readmore_icon_position&quot;:&quot;after&quot;,&quot;sg_content_readmore_text&quot;:&quot;Read More&quot;,&quot;sg_content_comment_heading&quot;:&quot;&quot;,&quot;sg_content_comment_enable&quot;:&quot;&quot;,&quot;sg_content_comment_icon&quot;:{&quot;value&quot;:&quot;fas fa-comment&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;sg_content_comment_icon_position&quot;:&quot;before&quot;,&quot;sg_content_meta_enable&quot;:&quot;yes&quot;,&quot;sg_content_meta_author_enable&quot;:&quot;&quot;,&quot;sg_content_meta_author_by_text&quot;:&quot;&quot;,&quot;sg_content_meta_author_icon&quot;:{&quot;value&quot;:&quot;&quot;,&quot;library&quot;:&quot;&quot;},&quot;sg_content_meta_author_icon_position&quot;:&quot;after&quot;,&quot;sg_content_meta_date_enable&quot;:&quot;yes&quot;,&quot;sg_content_meta_date_type&quot;:&quot;published&quot;,&quot;sg_content_meta_date_format&quot;:&quot;default&quot;,&quot;sg_content_meta_date_format_custom&quot;:&quot;F j, Y&quot;,&quot;sg_content_meta_date_icon&quot;:{&quot;value&quot;:&quot;fas fa-clock&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;sg_content_meta_date_icon_position&quot;:&quot;before&quot;,&quot;sg_content_image_size_imagesize_size&quot;:&quot;full&quot;,&quot;paged&quot;:1,&quot;class&quot;:&quot;jkit_post_block&quot;}">-->
-<!--                                                <div class="jkit-block-container">-->
-<!--                                                    <div class="jkit-posts jkit-ajax-flag">-->
-<!--                                                        <article class="jkit-post post-682 post type-post status-publish format-standard has-post-thumbnail hentry category-dentistry tag-check-up tag-dental">-->
-<!--                                                            <div class="jkit-thumb">-->
-<!--                                                                <a href="2021/03/28/5-reasons-your-children-need-regular-dental-check-up/index.htm">-->
-<!--                                                                    <div class="thumbnail-container ">-->
-<!--                                                                        <img loading="lazy"-->
-<!--                                                                             width="2000"-->
-<!--                                                                             height="1335"-->
-<!--                                                                             src="/static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office.jpg"-->
-<!--                                                                             class="attachment-full size-full wp-post-image"-->
-<!--                                                                             alt="dentists preparing little boy for examining teeth at dentist office"-->
-<!--                                                                             decoding="async"-->
-<!--                                                                             srcset="/static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office.jpg 2000w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-300x200.jpg 300w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-1024x684.jpg 1024w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-768x513.jpg 768w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-1536x1025.jpg 1536w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-800x534.jpg 800w"-->
-<!--                                                                             sizes="(max-width: 2000px) 100vw, 2000px">-->
-<!--                                                                    </div>-->
-<!--                                                                </a></div>-->
-<!--                                                            <div class="jkit-postblock-content">-->
-<!--                                                                <h3 class="jkit-post-title">-->
-<!--                                                                    <a href="2021/03/28/5-reasons-your-children-need-regular-dental-check-up/index.htm">5-->
-<!--                                                                        Reasons Your Children Need Regular Dental-->
-<!--                                                                        CheckUps</a>-->
-<!--                                                                </h3>-->
-<!--                                                                <div class="jkit-post-meta">-->
-<!--                                                                    <div class="jkit-meta-date icon-position-before">-->
-<!--                                                                        <i aria-hidden="true"-->
-<!--                                                                           class="fas fa-clock"></i>March 28, 2021-->
-<!--                                                                    </div>-->
-<!--                                                                </div>-->
-<!--                                                                <div class="jkit-post-excerpt"><p>Lorem ipsum dolor sit-->
-<!--                                                                    amet, consectetur adipiscing elit, sed do eiusmod-->
-<!--                                                                    tempor incididunt ut labore</p></div>-->
-<!--                                                                <div class="jkit-post-meta-bottom">-->
-<!--                                                                    <div class="jkit-meta-readmore icon-position-after">-->
-<!--                                                                        <a href="2021/03/28/5-reasons-your-children-need-regular-dental-check-up/index.htm"-->
-<!--                                                                           class="jkit-readmore">Read-->
-<!--                                                                            More<i aria-hidden="true"-->
-<!--                                                                                   class="fas fa-arrow-right"></i></a>-->
-<!--                                                                    </div>-->
-<!--                                                                </div>-->
-<!--                                                            </div>-->
-<!--                                                        </article>-->
-<!--                                                        <article class="jkit-post post-679 post type-post status-publish format-standard has-post-thumbnail hentry category-teeth tag-dead-tooth">-->
-<!--                                                            <div class="jkit-thumb">-->
-<!--                                                                <a href="2021/03/28/everything-you-need-to-know-about-a-dead-tooth/index.htm">-->
-<!--                                                                    <div class="thumbnail-container ">-->
-<!--                                                                        <img width="1920"-->
-<!--                                                                             height="1282"-->
-<!--                                                                             src="/static/wp-content/uploads/sites/64/2021/03/annual-check-up-e1617040308199.jpg"-->
-<!--                                                                             class="attachment-full size-full wp-post-image"-->
-<!--                                                                             alt="Annual check-up"-->
-<!--                                                                             decoding="async"-->
-<!--                                                                             loading="lazy">-->
-<!--                                                                    </div>-->
-<!--                                                                </a></div>-->
-<!--                                                            <div class="jkit-postblock-content">-->
-<!--                                                                <h3 class="jkit-post-title">-->
-<!--                                                                    <a href="2021/03/28/everything-you-need-to-know-about-a-dead-tooth/index.htm">Everything-->
-<!--                                                                        You Need To Know About a Dead Tooth</a>-->
-<!--                                                                </h3>-->
-<!--                                                                <div class="jkit-post-meta">-->
-<!--                                                                    <div class="jkit-meta-date icon-position-before">-->
-<!--                                                                        <i aria-hidden="true"-->
-<!--                                                                           class="fas fa-clock"></i>March 28, 2021-->
-<!--                                                                    </div>-->
-<!--                                                                </div>-->
-<!--                                                                <div class="jkit-post-excerpt"><p>Lorem ipsum dolor sit-->
-<!--                                                                    amet, consectetur adipiscing elit, sed do eiusmod-->
-<!--                                                                    tempor incididunt ut labore</p></div>-->
-<!--                                                                <div class="jkit-post-meta-bottom">-->
-<!--                                                                    <div class="jkit-meta-readmore icon-position-after">-->
-<!--                                                                        <a href="2021/03/28/everything-you-need-to-know-about-a-dead-tooth/index.htm"-->
-<!--                                                                           class="jkit-readmore">Read-->
-<!--                                                                            More<i aria-hidden="true"-->
-<!--                                                                                   class="fas fa-arrow-right"></i></a>-->
-<!--                                                                    </div>-->
-<!--                                                                </div>-->
-<!--                                                            </div>-->
-<!--                                                        </article>-->
-<!--                                                        <article class="jkit-post post-677 post type-post status-publish format-standard has-post-thumbnail hentry category-dentistry tag-cosmetic-dentistry">-->
-<!--                                                            <div class="jkit-thumb">-->
-<!--                                                                <a href="2021/03/28/everything-you-want-to-know-about-cosmetic-dentistry/index.htm">-->
-<!--                                                                    <div class="thumbnail-container ">-->
-<!--                                                                        <img width="1920"-->
-<!--                                                                             height="1282"-->
-<!--                                                                             src="/static/wp-content/uploads/sites/64/2021/03/low-angle-view-of-dentists-examining-teeth-of-little-boy-at-dentist-office-e1617040347874.jpg"-->
-<!--                                                                             class="attachment-full size-full wp-post-image"-->
-<!--                                                                             alt="low angle view of dentists examining teeth of little boy at dentist office"-->
-<!--                                                                             decoding="async"-->
-<!--                                                                             loading="lazy">-->
-<!--                                                                    </div>-->
-<!--                                                                </a></div>-->
-<!--                                                            <div class="jkit-postblock-content">-->
-<!--                                                                <h3 class="jkit-post-title">-->
-<!--                                                                    <a href="2021/03/28/everything-you-want-to-know-about-cosmetic-dentistry/index.htm">Everything-->
-<!--                                                                        You Want To Know About Cosmetic Dentistry</a>-->
-<!--                                                                </h3>-->
-<!--                                                                <div class="jkit-post-meta">-->
-<!--                                                                    <div class="jkit-meta-date icon-position-before">-->
-<!--                                                                        <i aria-hidden="true"-->
-<!--                                                                           class="fas fa-clock"></i>March 28, 2021-->
-<!--                                                                    </div>-->
-<!--                                                                </div>-->
-<!--                                                                <div class="jkit-post-excerpt"><p>Lorem ipsum dolor sit-->
-<!--                                                                    amet, consectetur adipiscing elit, sed do eiusmod-->
-<!--                                                                    tempor incididunt ut labore</p></div>-->
-<!--                                                                <div class="jkit-post-meta-bottom">-->
-<!--                                                                    <div class="jkit-meta-readmore icon-position-after">-->
-<!--                                                                        <a href="2021/03/28/everything-you-want-to-know-about-cosmetic-dentistry/index.htm"-->
-<!--                                                                           class="jkit-readmore">Read-->
-<!--                                                                            More<i aria-hidden="true"-->
-<!--                                                                                   class="fas fa-arrow-right"></i></a>-->
-<!--                                                                    </div>-->
-<!--                                                                </div>-->
-<!--                                                            </div>-->
-<!--                                                        </article>-->
-<!--                                                        <article class="jkit-post post-282 post type-post status-publish format-standard has-post-thumbnail hentry category-teeth tag-health tag-protect">-->
-<!--                                                            <div class="jkit-thumb">-->
-<!--                                                                <a href="2021/03/27/what-you-need-to-know-about-wisdom-teeth/index.htm">-->
-<!--                                                                    <div class="thumbnail-container ">-->
-<!--                                                                        <img width="1920"-->
-<!--                                                                             height="1282"-->
-<!--                                                                             src="/static/wp-content/uploads/sites/64/2021/03/dentists-are-working-with-patient-e1617040255996.jpg"-->
-<!--                                                                             class="attachment-full size-full wp-post-image"-->
-<!--                                                                             alt="Dentists are working with patient"-->
-<!--                                                                             decoding="async"-->
-<!--                                                                             loading="lazy">-->
-<!--                                                                    </div>-->
-<!--                                                                </a></div>-->
-<!--                                                            <div class="jkit-postblock-content">-->
-<!--                                                                <h3 class="jkit-post-title">-->
-<!--                                                                    <a href="2021/03/27/what-you-need-to-know-about-wisdom-teeth/index.htm">What-->
-<!--                                                                        You Need to Know About Wisdom Teeth</a>-->
-<!--                                                                </h3>-->
-<!--                                                                <div class="jkit-post-meta">-->
-<!--                                                                    <div class="jkit-meta-date icon-position-before">-->
-<!--                                                                        <i aria-hidden="true"-->
-<!--                                                                           class="fas fa-clock"></i>March 27, 2021-->
-<!--                                                                    </div>-->
-<!--                                                                </div>-->
-<!--                                                                <div class="jkit-post-excerpt"><p>Lorem ipsum dolor sit-->
-<!--                                                                    amet, consectetur adipiscing elit, sed do eiusmod-->
-<!--                                                                    tempor incididunt ut labore</p></div>-->
-<!--                                                                <div class="jkit-post-meta-bottom">-->
-<!--                                                                    <div class="jkit-meta-readmore icon-position-after">-->
-<!--                                                                        <a href="2021/03/27/what-you-need-to-know-about-wisdom-teeth/index.htm"-->
-<!--                                                                           class="jkit-readmore">Read-->
-<!--                                                                            More<i aria-hidden="true"-->
-<!--                                                                                   class="fas fa-arrow-right"></i></a>-->
-<!--                                                                    </div>-->
-<!--                                                                </div>-->
-<!--                                                            </div>-->
-<!--                                                        </article>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-<!--    <section class="elementor-section elementor-top-section elementor-element elementor-element-f14aaf4 elementor-section-boxed elementor-section-height-default elementor-section-height-default"-->
-<!--             data-id="f14aaf4"-->
-<!--             data-element_type="section">-->
-<!--        <div class="elementor-container elementor-column-gap-no">-->
-<!--            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-52d3881"-->
-<!--                 data-id="52d3881"-->
-<!--                 data-element_type="column"-->
-<!--                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">-->
-<!--                <div class="elementor-widget-wrap elementor-element-populated">-->
-<!--                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-236c930 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"-->
-<!--                             data-id="236c930"-->
-<!--                             data-element_type="section"-->
-<!--                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">-->
-<!--                        <div class="elementor-container elementor-column-gap-default">-->
-<!--                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b0b9a78"-->
-<!--                                 data-id="b0b9a78"-->
-<!--                                 data-element_type="column">-->
-<!--                                <div class="elementor-widget-wrap elementor-element-populated">-->
-<!--                                    <div class="elementor-element elementor-element-060f792 elementor-widget elementor-widget-heading"-->
-<!--                                         data-id="060f792"-->
-<!--                                         data-element_type="widget"-->
-<!--                                         data-widget_type="heading.default">-->
-<!--                                        <div class="elementor-widget-container">-->
-<!--                                            <h2 class="elementor-heading-title elementor-size-default">Stay Connected-->
-<!--                                                with Dentcare</h2></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a7e0962"-->
-<!--                                 data-id="a7e0962"-->
-<!--                                 data-element_type="column">-->
-<!--                                <div class="elementor-widget-wrap elementor-element-populated">-->
-<!--                                    <div class="elementor-element elementor-element-102d8f6 elementor-shape-circle e-grid-align-right e-grid-align-mobile-center elementor-grid-0 elementor-widget elementor-widget-social-icons"-->
-<!--                                         data-id="102d8f6"-->
-<!--                                         data-element_type="widget"-->
-<!--                                         data-widget_type="social-icons.default">-->
-<!--                                        <div class="elementor-widget-container">-->
-<!--                                            <div class="elementor-social-icons-wrapper elementor-grid">-->
-<!--							<span class="elementor-grid-item">-->
-<!--					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-shrink elementor-repeater-item-de0fdf0"-->
-<!--                       target="_blank">-->
-<!--						<span class="elementor-screen-only">Facebook-f</span>-->
-<!--						<i class="fab fa-facebook-f"></i>					</a>-->
-<!--				</span>-->
-<!--                                                <span class="elementor-grid-item">-->
-<!--					<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-shrink elementor-repeater-item-84db05e"-->
-<!--                       target="_blank">-->
-<!--						<span class="elementor-screen-only">Twitter</span>-->
-<!--						<i class="fab fa-twitter"></i>					</a>-->
-<!--				</span>-->
-<!--                                                <span class="elementor-grid-item">-->
-<!--					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-3909367"-->
-<!--                       target="_blank">-->
-<!--						<span class="elementor-screen-only">Instagram</span>-->
-<!--						<i class="fab fa-instagram"></i>					</a>-->
-<!--				</span>-->
-<!--                                                <span class="elementor-grid-item">-->
-<!--					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-shrink elementor-repeater-item-3ab670c"-->
-<!--                       target="_blank">-->
-<!--						<span class="elementor-screen-only">Youtube</span>-->
-<!--						<i class="fab fa-youtube"></i>					</a>-->
-<!--				</span>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
+    <!--    <section class="elementor-section elementor-top-section elementor-element elementor-element-a9fd247 elementor-section-boxed elementor-section-height-default elementor-section-height-default"-->
+    <!--             data-id="a9fd247"-->
+    <!--             data-element_type="section">-->
+    <!--        <div class="elementor-background-overlay"></div>-->
+    <!--        <div class="elementor-container elementor-column-gap-default">-->
+    <!--            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dd6b1c9"-->
+    <!--                 data-id="dd6b1c9"-->
+    <!--                 data-element_type="column">-->
+    <!--                <div class="elementor-widget-wrap elementor-element-populated">-->
+    <!--                    <div class="elementor-element elementor-element-32aa0f7 animated-slow elementor-invisible elementor-widget elementor-widget-heading"-->
+    <!--                         data-id="32aa0f7"-->
+    <!--                         data-element_type="widget"-->
+    <!--                         data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}"-->
+    <!--                         data-widget_type="heading.default">-->
+    <!--                        <div class="elementor-widget-container">-->
+    <!--                            <h5 class="elementor-heading-title elementor-size-default">Our Blog</h5></div>-->
+    <!--                    </div>-->
+    <!--                    <div class="elementor-element elementor-element-f910ca9 elementor-widget elementor-widget-heading"-->
+    <!--                         data-id="f910ca9"-->
+    <!--                         data-element_type="widget"-->
+    <!--                         data-widget_type="heading.default">-->
+    <!--                        <div class="elementor-widget-container">-->
+    <!--                            <h2 class="elementor-heading-title elementor-size-default">Latest Blog & Articles-->
+    <!--                            </h2></div>-->
+    <!--                    </div>-->
+    <!--                    <div class="elementor-element elementor-element-0e03774 elementor-widget elementor-widget-text-editor"-->
+    <!--                         data-id="0e03774"-->
+    <!--                         data-element_type="widget"-->
+    <!--                         data-widget_type="text-editor.default">-->
+    <!--                        <div class="elementor-widget-container">-->
+    <!--                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
+    <!--                            labore et dolore magna aliqua-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-226d4aa elementor-section-boxed elementor-section-height-default elementor-section-height-default"-->
+    <!--                             data-id="226d4aa"-->
+    <!--                             data-element_type="section">-->
+    <!--                        <div class="elementor-container elementor-column-gap-no">-->
+    <!--                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9adda55 elementor-invisible"-->
+    <!--                                 data-id="9adda55"-->
+    <!--                                 data-element_type="column"-->
+    <!--                                 data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">-->
+    <!--                                <div class="elementor-widget-wrap elementor-element-populated">-->
+    <!--                                    <div class="elementor-element elementor-element-d3a4d8d elementor-widget elementor-widget-jkit_post_block"-->
+    <!--                                         data-id="d3a4d8d"-->
+    <!--                                         data-element_type="widget"-->
+    <!--                                         data-widget_type="jkit_post_block.default">-->
+    <!--                                        <div class="elementor-widget-container">-->
+    <!--                                            <div class="jeg-elementor-kit jkit-postblock postblock-type-1 jkit-pagination-disable post-element jeg_module_14_24_640f7347917c5"-->
+    <!--                                                 data-id="jeg_module_14_24_640f7347917c5"-->
+    <!--                                                 data-settings="{&quot;post_type&quot;:&quot;post&quot;,&quot;number_post&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:4,&quot;sizes&quot;:[]},&quot;post_offset&quot;:0,&quot;unique_content&quot;:&quot;disable&quot;,&quot;include_post&quot;:&quot;&quot;,&quot;exclude_post&quot;:&quot;&quot;,&quot;include_category&quot;:&quot;&quot;,&quot;exclude_category&quot;:&quot;&quot;,&quot;include_author&quot;:&quot;&quot;,&quot;include_tag&quot;:&quot;&quot;,&quot;exclude_tag&quot;:&quot;&quot;,&quot;sort_by&quot;:&quot;latest&quot;,&quot;pagination_mode&quot;:&quot;disable&quot;,&quot;pagination_loadmore_text&quot;:&quot;Load More&quot;,&quot;pagination_loading_text&quot;:&quot;Loading...&quot;,&quot;pagination_number_post&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:3,&quot;sizes&quot;:[]},&quot;pagination_scroll_limit&quot;:0,&quot;pagination_icon&quot;:{&quot;value&quot;:&quot;&quot;,&quot;library&quot;:&quot;&quot;},&quot;pagination_icon_position&quot;:&quot;before&quot;,&quot;st_category_position&quot;:&quot;center&quot;,&quot;sg_content_postblock_type&quot;:&quot;type-1&quot;,&quot;sg_content_title_html_tag&quot;:&quot;h3&quot;,&quot;sg_content_category_enable&quot;:&quot;&quot;,&quot;sg_content_excerpt_enable&quot;:&quot;yes&quot;,&quot;sg_content_excerpt_length&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:15,&quot;sizes&quot;:[]},&quot;sg_content_excerpt_more&quot;:&quot;&quot;,&quot;sg_content_readmore_enable&quot;:&quot;yes&quot;,&quot;sg_content_readmore_icon&quot;:{&quot;value&quot;:&quot;fas fa-arrow-right&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;sg_content_readmore_icon_position&quot;:&quot;after&quot;,&quot;sg_content_readmore_text&quot;:&quot;Read More&quot;,&quot;sg_content_comment_heading&quot;:&quot;&quot;,&quot;sg_content_comment_enable&quot;:&quot;&quot;,&quot;sg_content_comment_icon&quot;:{&quot;value&quot;:&quot;fas fa-comment&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;sg_content_comment_icon_position&quot;:&quot;before&quot;,&quot;sg_content_meta_enable&quot;:&quot;yes&quot;,&quot;sg_content_meta_author_enable&quot;:&quot;&quot;,&quot;sg_content_meta_author_by_text&quot;:&quot;&quot;,&quot;sg_content_meta_author_icon&quot;:{&quot;value&quot;:&quot;&quot;,&quot;library&quot;:&quot;&quot;},&quot;sg_content_meta_author_icon_position&quot;:&quot;after&quot;,&quot;sg_content_meta_date_enable&quot;:&quot;yes&quot;,&quot;sg_content_meta_date_type&quot;:&quot;published&quot;,&quot;sg_content_meta_date_format&quot;:&quot;default&quot;,&quot;sg_content_meta_date_format_custom&quot;:&quot;F j, Y&quot;,&quot;sg_content_meta_date_icon&quot;:{&quot;value&quot;:&quot;fas fa-clock&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;sg_content_meta_date_icon_position&quot;:&quot;before&quot;,&quot;sg_content_image_size_imagesize_size&quot;:&quot;full&quot;,&quot;paged&quot;:1,&quot;class&quot;:&quot;jkit_post_block&quot;}">-->
+    <!--                                                <div class="jkit-block-container">-->
+    <!--                                                    <div class="jkit-posts jkit-ajax-flag">-->
+    <!--                                                        <article class="jkit-post post-682 post type-post status-publish format-standard has-post-thumbnail hentry category-dentistry tag-check-up tag-dental">-->
+    <!--                                                            <div class="jkit-thumb">-->
+    <!--                                                                <a href="2021/03/28/5-reasons-your-children-need-regular-dental-check-up/index.htm">-->
+    <!--                                                                    <div class="thumbnail-container ">-->
+    <!--                                                                        <img loading="lazy"-->
+    <!--                                                                             width="2000"-->
+    <!--                                                                             height="1335"-->
+    <!--                                                                             src="/static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office.jpg"-->
+    <!--                                                                             class="attachment-full size-full wp-post-image"-->
+    <!--                                                                             alt="dentists preparing little boy for examining teeth at dentist office"-->
+    <!--                                                                             decoding="async"-->
+    <!--                                                                             srcset="/static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office.jpg 2000w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-300x200.jpg 300w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-1024x684.jpg 1024w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-768x513.jpg 768w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-1536x1025.jpg 1536w, /static/wp-content/uploads/sites/64/2021/03/dentists-preparing-little-boy-for-examining-teeth-at-dentist-office-800x534.jpg 800w"-->
+    <!--                                                                             sizes="(max-width: 2000px) 100vw, 2000px">-->
+    <!--                                                                    </div>-->
+    <!--                                                                </a></div>-->
+    <!--                                                            <div class="jkit-postblock-content">-->
+    <!--                                                                <h3 class="jkit-post-title">-->
+    <!--                                                                    <a href="2021/03/28/5-reasons-your-children-need-regular-dental-check-up/index.htm">5-->
+    <!--                                                                        Reasons Your Children Need Regular Dental-->
+    <!--                                                                        CheckUps</a>-->
+    <!--                                                                </h3>-->
+    <!--                                                                <div class="jkit-post-meta">-->
+    <!--                                                                    <div class="jkit-meta-date icon-position-before">-->
+    <!--                                                                        <i aria-hidden="true"-->
+    <!--                                                                           class="fas fa-clock"></i>March 28, 2021-->
+    <!--                                                                    </div>-->
+    <!--                                                                </div>-->
+    <!--                                                                <div class="jkit-post-excerpt"><p>Lorem ipsum dolor sit-->
+    <!--                                                                    amet, consectetur adipiscing elit, sed do eiusmod-->
+    <!--                                                                    tempor incididunt ut labore</p></div>-->
+    <!--                                                                <div class="jkit-post-meta-bottom">-->
+    <!--                                                                    <div class="jkit-meta-readmore icon-position-after">-->
+    <!--                                                                        <a href="2021/03/28/5-reasons-your-children-need-regular-dental-check-up/index.htm"-->
+    <!--                                                                           class="jkit-readmore">Read-->
+    <!--                                                                            More<i aria-hidden="true"-->
+    <!--                                                                                   class="fas fa-arrow-right"></i></a>-->
+    <!--                                                                    </div>-->
+    <!--                                                                </div>-->
+    <!--                                                            </div>-->
+    <!--                                                        </article>-->
+    <!--                                                        <article class="jkit-post post-679 post type-post status-publish format-standard has-post-thumbnail hentry category-teeth tag-dead-tooth">-->
+    <!--                                                            <div class="jkit-thumb">-->
+    <!--                                                                <a href="2021/03/28/everything-you-need-to-know-about-a-dead-tooth/index.htm">-->
+    <!--                                                                    <div class="thumbnail-container ">-->
+    <!--                                                                        <img width="1920"-->
+    <!--                                                                             height="1282"-->
+    <!--                                                                             src="/static/wp-content/uploads/sites/64/2021/03/annual-check-up-e1617040308199.jpg"-->
+    <!--                                                                             class="attachment-full size-full wp-post-image"-->
+    <!--                                                                             alt="Annual check-up"-->
+    <!--                                                                             decoding="async"-->
+    <!--                                                                             loading="lazy">-->
+    <!--                                                                    </div>-->
+    <!--                                                                </a></div>-->
+    <!--                                                            <div class="jkit-postblock-content">-->
+    <!--                                                                <h3 class="jkit-post-title">-->
+    <!--                                                                    <a href="2021/03/28/everything-you-need-to-know-about-a-dead-tooth/index.htm">Everything-->
+    <!--                                                                        You Need To Know About a Dead Tooth</a>-->
+    <!--                                                                </h3>-->
+    <!--                                                                <div class="jkit-post-meta">-->
+    <!--                                                                    <div class="jkit-meta-date icon-position-before">-->
+    <!--                                                                        <i aria-hidden="true"-->
+    <!--                                                                           class="fas fa-clock"></i>March 28, 2021-->
+    <!--                                                                    </div>-->
+    <!--                                                                </div>-->
+    <!--                                                                <div class="jkit-post-excerpt"><p>Lorem ipsum dolor sit-->
+    <!--                                                                    amet, consectetur adipiscing elit, sed do eiusmod-->
+    <!--                                                                    tempor incididunt ut labore</p></div>-->
+    <!--                                                                <div class="jkit-post-meta-bottom">-->
+    <!--                                                                    <div class="jkit-meta-readmore icon-position-after">-->
+    <!--                                                                        <a href="2021/03/28/everything-you-need-to-know-about-a-dead-tooth/index.htm"-->
+    <!--                                                                           class="jkit-readmore">Read-->
+    <!--                                                                            More<i aria-hidden="true"-->
+    <!--                                                                                   class="fas fa-arrow-right"></i></a>-->
+    <!--                                                                    </div>-->
+    <!--                                                                </div>-->
+    <!--                                                            </div>-->
+    <!--                                                        </article>-->
+    <!--                                                        <article class="jkit-post post-677 post type-post status-publish format-standard has-post-thumbnail hentry category-dentistry tag-cosmetic-dentistry">-->
+    <!--                                                            <div class="jkit-thumb">-->
+    <!--                                                                <a href="2021/03/28/everything-you-want-to-know-about-cosmetic-dentistry/index.htm">-->
+    <!--                                                                    <div class="thumbnail-container ">-->
+    <!--                                                                        <img width="1920"-->
+    <!--                                                                             height="1282"-->
+    <!--                                                                             src="/static/wp-content/uploads/sites/64/2021/03/low-angle-view-of-dentists-examining-teeth-of-little-boy-at-dentist-office-e1617040347874.jpg"-->
+    <!--                                                                             class="attachment-full size-full wp-post-image"-->
+    <!--                                                                             alt="low angle view of dentists examining teeth of little boy at dentist office"-->
+    <!--                                                                             decoding="async"-->
+    <!--                                                                             loading="lazy">-->
+    <!--                                                                    </div>-->
+    <!--                                                                </a></div>-->
+    <!--                                                            <div class="jkit-postblock-content">-->
+    <!--                                                                <h3 class="jkit-post-title">-->
+    <!--                                                                    <a href="2021/03/28/everything-you-want-to-know-about-cosmetic-dentistry/index.htm">Everything-->
+    <!--                                                                        You Want To Know About Cosmetic Dentistry</a>-->
+    <!--                                                                </h3>-->
+    <!--                                                                <div class="jkit-post-meta">-->
+    <!--                                                                    <div class="jkit-meta-date icon-position-before">-->
+    <!--                                                                        <i aria-hidden="true"-->
+    <!--                                                                           class="fas fa-clock"></i>March 28, 2021-->
+    <!--                                                                    </div>-->
+    <!--                                                                </div>-->
+    <!--                                                                <div class="jkit-post-excerpt"><p>Lorem ipsum dolor sit-->
+    <!--                                                                    amet, consectetur adipiscing elit, sed do eiusmod-->
+    <!--                                                                    tempor incididunt ut labore</p></div>-->
+    <!--                                                                <div class="jkit-post-meta-bottom">-->
+    <!--                                                                    <div class="jkit-meta-readmore icon-position-after">-->
+    <!--                                                                        <a href="2021/03/28/everything-you-want-to-know-about-cosmetic-dentistry/index.htm"-->
+    <!--                                                                           class="jkit-readmore">Read-->
+    <!--                                                                            More<i aria-hidden="true"-->
+    <!--                                                                                   class="fas fa-arrow-right"></i></a>-->
+    <!--                                                                    </div>-->
+    <!--                                                                </div>-->
+    <!--                                                            </div>-->
+    <!--                                                        </article>-->
+    <!--                                                        <article class="jkit-post post-282 post type-post status-publish format-standard has-post-thumbnail hentry category-teeth tag-health tag-protect">-->
+    <!--                                                            <div class="jkit-thumb">-->
+    <!--                                                                <a href="2021/03/27/what-you-need-to-know-about-wisdom-teeth/index.htm">-->
+    <!--                                                                    <div class="thumbnail-container ">-->
+    <!--                                                                        <img width="1920"-->
+    <!--                                                                             height="1282"-->
+    <!--                                                                             src="/static/wp-content/uploads/sites/64/2021/03/dentists-are-working-with-patient-e1617040255996.jpg"-->
+    <!--                                                                             class="attachment-full size-full wp-post-image"-->
+    <!--                                                                             alt="Dentists are working with patient"-->
+    <!--                                                                             decoding="async"-->
+    <!--                                                                             loading="lazy">-->
+    <!--                                                                    </div>-->
+    <!--                                                                </a></div>-->
+    <!--                                                            <div class="jkit-postblock-content">-->
+    <!--                                                                <h3 class="jkit-post-title">-->
+    <!--                                                                    <a href="2021/03/27/what-you-need-to-know-about-wisdom-teeth/index.htm">What-->
+    <!--                                                                        You Need to Know About Wisdom Teeth</a>-->
+    <!--                                                                </h3>-->
+    <!--                                                                <div class="jkit-post-meta">-->
+    <!--                                                                    <div class="jkit-meta-date icon-position-before">-->
+    <!--                                                                        <i aria-hidden="true"-->
+    <!--                                                                           class="fas fa-clock"></i>March 27, 2021-->
+    <!--                                                                    </div>-->
+    <!--                                                                </div>-->
+    <!--                                                                <div class="jkit-post-excerpt"><p>Lorem ipsum dolor sit-->
+    <!--                                                                    amet, consectetur adipiscing elit, sed do eiusmod-->
+    <!--                                                                    tempor incididunt ut labore</p></div>-->
+    <!--                                                                <div class="jkit-post-meta-bottom">-->
+    <!--                                                                    <div class="jkit-meta-readmore icon-position-after">-->
+    <!--                                                                        <a href="2021/03/27/what-you-need-to-know-about-wisdom-teeth/index.htm"-->
+    <!--                                                                           class="jkit-readmore">Read-->
+    <!--                                                                            More<i aria-hidden="true"-->
+    <!--                                                                                   class="fas fa-arrow-right"></i></a>-->
+    <!--                                                                    </div>-->
+    <!--                                                                </div>-->
+    <!--                                                            </div>-->
+    <!--                                                        </article>-->
+    <!--                                                    </div>-->
+    <!--                                                </div>-->
+    <!--                                            </div>-->
+    <!--                                        </div>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </section>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+    <!--    <section class="elementor-section elementor-top-section elementor-element elementor-element-f14aaf4 elementor-section-boxed elementor-section-height-default elementor-section-height-default"-->
+    <!--             data-id="f14aaf4"-->
+    <!--             data-element_type="section">-->
+    <!--        <div class="elementor-container elementor-column-gap-no">-->
+    <!--            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-52d3881"-->
+    <!--                 data-id="52d3881"-->
+    <!--                 data-element_type="column"-->
+    <!--                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">-->
+    <!--                <div class="elementor-widget-wrap elementor-element-populated">-->
+    <!--                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-236c930 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"-->
+    <!--                             data-id="236c930"-->
+    <!--                             data-element_type="section"-->
+    <!--                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">-->
+    <!--                        <div class="elementor-container elementor-column-gap-default">-->
+    <!--                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b0b9a78"-->
+    <!--                                 data-id="b0b9a78"-->
+    <!--                                 data-element_type="column">-->
+    <!--                                <div class="elementor-widget-wrap elementor-element-populated">-->
+    <!--                                    <div class="elementor-element elementor-element-060f792 elementor-widget elementor-widget-heading"-->
+    <!--                                         data-id="060f792"-->
+    <!--                                         data-element_type="widget"-->
+    <!--                                         data-widget_type="heading.default">-->
+    <!--                                        <div class="elementor-widget-container">-->
+    <!--                                            <h2 class="elementor-heading-title elementor-size-default">Stay Connected-->
+    <!--                                                with Dentcare</h2></div>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a7e0962"-->
+    <!--                                 data-id="a7e0962"-->
+    <!--                                 data-element_type="column">-->
+    <!--                                <div class="elementor-widget-wrap elementor-element-populated">-->
+    <!--                                    <div class="elementor-element elementor-element-102d8f6 elementor-shape-circle e-grid-align-right e-grid-align-mobile-center elementor-grid-0 elementor-widget elementor-widget-social-icons"-->
+    <!--                                         data-id="102d8f6"-->
+    <!--                                         data-element_type="widget"-->
+    <!--                                         data-widget_type="social-icons.default">-->
+    <!--                                        <div class="elementor-widget-container">-->
+    <!--                                            <div class="elementor-social-icons-wrapper elementor-grid">-->
+    <!--							<span class="elementor-grid-item">-->
+    <!--					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-shrink elementor-repeater-item-de0fdf0"-->
+    <!--                       target="_blank">-->
+    <!--						<span class="elementor-screen-only">Facebook-f</span>-->
+    <!--						<i class="fab fa-facebook-f"></i>					</a>-->
+    <!--				</span>-->
+    <!--                                                <span class="elementor-grid-item">-->
+    <!--					<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-shrink elementor-repeater-item-84db05e"-->
+    <!--                       target="_blank">-->
+    <!--						<span class="elementor-screen-only">Twitter</span>-->
+    <!--						<i class="fab fa-twitter"></i>					</a>-->
+    <!--				</span>-->
+    <!--                                                <span class="elementor-grid-item">-->
+    <!--					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-3909367"-->
+    <!--                       target="_blank">-->
+    <!--						<span class="elementor-screen-only">Instagram</span>-->
+    <!--						<i class="fab fa-instagram"></i>					</a>-->
+    <!--				</span>-->
+    <!--                                                <span class="elementor-grid-item">-->
+    <!--					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-shrink elementor-repeater-item-3ab670c"-->
+    <!--                       target="_blank">-->
+    <!--						<span class="elementor-screen-only">Youtube</span>-->
+    <!--						<i class="fab fa-youtube"></i>					</a>-->
+    <!--				</span>-->
+    <!--                                            </div>-->
+    <!--                                        </div>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </section>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
 </div>
 {% endblock %}

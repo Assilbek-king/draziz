@@ -27,6 +27,7 @@ urlpatterns = [
     path('service', serviceHandler),
     path('price', priceHandler),
     path('contact', contactHandler),
+    path('appoint', appointHandler),
 
 
 

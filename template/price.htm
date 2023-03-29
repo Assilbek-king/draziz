@@ -354,7 +354,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-cd40735 elementor-widget elementor-widget-heading" data-id="cd40735" data-element_type="widget" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h3 class="elementor-heading-title elementor-size-default">Simple Plan
+                                                <h3 class="elementor-heading-title elementor-size-default">Прайс Лист
                                                 </h3></div>
                                         </div>
                                         <div class="elementor-element elementor-element-7bd832d elementor-widget elementor-widget-text-editor" data-id="7bd832d" data-element_type="widget" data-widget_type="text-editor.default">
@@ -365,43 +365,24 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                         <div class="elementor-element elementor-element-ba239e3 elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="ba239e3" data-element_type="widget" data-widget_type="icon-list.default">
                                             <div class="elementor-widget-container">
                                                 <ul class="elementor-icon-list-items">
+                                                    {% for pr in prices %}
                                                     <li class="elementor-icon-list-item" style="justify-content:space-between;padding:0px 30px 10px">
 											<span class="elementor-icon-list-icon" style="text-align:left">
-							<!--<i aria-hidden="true" class="fas fa-check"></i>-->Пломбировочный материал Megafill MH «STANDARD»						</span>
+							<!--<i aria-hidden="true" class="fas fa-check"></i>-->{{ pr.name }}						</span>
                                                         <span class="elementor-icon-list-text" style=" margin-left:20px;   font-family: var(--e-global-typography-6ba0f21-font-family ), Sans-serif;
     font-size: 20px;
-    font-weight: 600;">10.000</span>
+    font-weight: 600;">{{ pr.price }}	</span>
                                                     </li>
-                                                    <li class="elementor-icon-list-item" style="justify-content:space-between;padding:0px 30px 10px">
-											<span class="elementor-icon-list-icon" style="text-align:left">
-							<!--<i aria-hidden="true" class="fas fa-check"></i>-->Пломбировочный материал Megafill MH «STANDARD»						</span>
-                                                        <span class="elementor-icon-list-text" style=" margin-left:20px;   font-family: var(--e-global-typography-6ba0f21-font-family ), Sans-serif;
-    font-size: 20px;
-    font-weight: 600;">10.000</span>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item" style="justify-content:space-between;padding:0px 30px 10px">
-											<span class="elementor-icon-list-icon" style="text-align:left">
-							<!--<i aria-hidden="true" class="fas fa-check"></i>-->Пломбировочный материал Megafill MH «STANDARD»						</span>
-                                                        <span class="elementor-icon-list-text" style=" margin-left:20px;   font-family: var(--e-global-typography-6ba0f21-font-family ), Sans-serif;
-    font-size: 20px;
-    font-weight: 600;">10.000</span>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item" style="justify-content:space-between;padding:0px 30px 10px">
-											<span class="elementor-icon-list-icon" style="text-align:left">
-							<!--<i aria-hidden="true" class="fas fa-check"></i>-->Пломбировочный материал Megafill MH «STANDARD»						</span>
-                                                        <span class="elementor-icon-list-text" style=" margin-left:20px;   font-family: var(--e-global-typography-6ba0f21-font-family ), Sans-serif;
-    font-size: 20px;
-    font-weight: 600;">10.000</span>
-                                                    </li>
+                                                    {% endfor %}
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-aa3fbd9 elementor-align-center elementor-widget elementor-widget-button" data-id="aa3fbd9" data-element_type="widget" data-widget_type="button.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-button-wrapper">
-                                                    <a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-float" role="button">
+                                                    <a href="/static/image/price.pdf" target="_blank" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-float" role="button">
 						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-text">Get Started</span>
+						<span class="elementor-button-text">Скачать прайс лист</span>
 		</span>
                                                     </a>
                                                 </div>
@@ -599,14 +580,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                         </div>
                     </div>
                 </div>
-                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b37b8d5 elementor-hidden-phone" data-id="b37b8d5" data-element_type="column">
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b37b8d5 " data-id="b37b8d5" data-element_type="column">
                     <div class="elementor-widget-wrap elementor-element-populated">
                         <div class="elementor-element elementor-element-f0ad2ea elementor-widget elementor-widget-image" data-id="f0ad2ea" data-element_type="widget" data-widget_type="image.default">
                             <div class="elementor-widget-container">
                                                                 <img width="890" height="1046" src="/static/image/dent.jpg" class="attachment-full size-full wp-image-576" alt="" decoding="async" loading="lazy" srcset="/static/image/dent.jpg 890w, /static/image/dent.jpg 255w, /static/image/dent.jpg 871w, /static/image/dent.jpg 768w, /static/image/dent.jpg 800w" sizes="(max-width: 890px) 100vw, 890px">
  </div>
                         </div>
-                        <div class="elementor-element elementor-element-f5996f6 elementor-widget__width-auto elementor-absolute jkit-equal-height-disable elementor-widget elementor-widget-jkit_icon_box" data-id="f5996f6" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="jkit_icon_box.default">
+                        <div class="elementor-element elementor-element-f5996f6 elementor-hidden-phone elementor-widget__width-auto elementor-absolute jkit-equal-height-disable elementor-widget elementor-widget-jkit_icon_box" data-id="f5996f6" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="jkit_icon_box.default">
                             <div class="elementor-widget-container">
                                 <div class="jeg-elementor-kit jkit-icon-box icon-position- elementor-animation- jeg_module_917_3_641a2a53a56d0">
                                     <div class="jkit-icon-box-wrapper hover-from-left">

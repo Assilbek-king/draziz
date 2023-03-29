@@ -10,4 +10,6 @@ admin.site.register(Doctor, AdminModelSingle)
 admin.site.register(Otziv, AdminModelSingle)
 admin.site.register(Feedback, AdminModelSingle)
 admin.site.register(Gallery, AdminModelSingle)
+admin.site.register(Zapis, AdminModelSingle)
+admin.site.register(Price, AdminModelSingle)
 

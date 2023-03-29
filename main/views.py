@@ -17,8 +17,10 @@ def aboutHandler(request):
 
 def priceHandler(request):
     otzivs = Otziv.objects.all()
+    prices = Price.objects.all()
     return render(request, 'price.htm', {
         'otzivs': otzivs,
+        'prices': prices,
     })
 
 def serviceHandler(request):
@@ -28,6 +30,21 @@ def serviceHandler(request):
     })
 
 def contactHandler(request):
+
+    return render(request, 'contact.htm', {
+    })
+
+def appointHandler(request):
+    if request.POST:
+        new_zapis = Zapis()
+        new_zapis.name = request.POST.get('name', '')
+        new_zapis.phone = request.POST.get('phone', '')
+        new_zapis.service = request.POST.get('service', '')
+        new_zapis.date = request.POST.get('date', '')
+        new_zapis.save()
+
+
+
 
     return render(request, 'contact.htm', {
     })

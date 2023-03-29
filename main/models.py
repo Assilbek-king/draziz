@@ -53,9 +53,20 @@ class Gallery(models.Model):
         return f'{self.logo}'
 
 
-# class Price(models.Model):
-#     name = models.CharField(max_length=300, blank=True)
-#     price = models.CharField(max_length=7, blank=True)
-#
-#     def __str__(self):
-#         return f'{self.name} {self.price}'
+class Price(models.Model):
+    name = models.CharField(max_length=300, blank=True)
+    price = models.CharField(max_length=7, blank=True)
+
+    def __str__(self):
+        return f'{self.name} {self.price}'
+
+class Zapis(models.Model):
+    name = models.CharField(max_length=300, blank=True)
+    phone = models.CharField(max_length=15, blank=True)
+    service = models.CharField(max_length=300, blank=True)
+    date = models.DateField(blank=True,null=True)
+    status = models.BooleanField(blank=True,default=True)
+
+    def __str__(self):
+        return f'{self.name} {self.phone}'
+
